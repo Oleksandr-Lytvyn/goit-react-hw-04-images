@@ -48,7 +48,6 @@ export function App() {
   function nextPage() {
     setShowLoader(true);
     setPage(prev => prev + 1);
-    console.log(query, page);
     try {
       getAPI(query, page + 1).then(response => {
         const images = response.data.hits;
